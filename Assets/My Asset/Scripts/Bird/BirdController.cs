@@ -10,6 +10,8 @@ public class BirdController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             GameManager.Instance.Bird.rigidbody.velocity = Vector2.up*velocity;
+            GameManager.Instance.musicGame.Touch.Play();
+            GameManager.Instance.PlayGame();
         }    
     }
 }

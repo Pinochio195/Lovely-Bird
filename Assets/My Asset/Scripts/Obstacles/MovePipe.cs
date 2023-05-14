@@ -6,14 +6,13 @@ using Vector2 = System.Numerics.Vector2;
 public class MovePipe : MonoBehaviour
 {
     public float speed;
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position += Vector3.left * speed * Time.deltaTime;
+        if (GameManager.Instance.isCheck)
+        {
+            transform.position += Vector3.left * speed * Time.deltaTime;
+        }
     }
 }
