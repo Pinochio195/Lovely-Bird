@@ -50,10 +50,10 @@ public class GameManager : MonoBehaviour
     }
     public void GameOver()
     {
-        GameManager.Instance.musicGame.Hit.Play();
+        musicGame.Hit.Play();
         Time.timeScale = 0;
         gameOver.GO_GameOver.SetActive(true);
-        hightCore.txt_Point.text = hightCore.Point.ToString();
+        hightCore.txt_Point.gameObject.SetActive(false);
         PlayerPrefs.SetInt(hightCore.playerPrefs_Coin, Int32.Parse(hightCore.txt_Point.text));
     }
 }
