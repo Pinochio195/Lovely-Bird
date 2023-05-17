@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
         hightCore.Point = 0;
         Bird.rigidbody.isKinematic = true;
         isCheck = false;
+        Application.targetFrameRate = 60;
     }
 
     public void PlayGame()
